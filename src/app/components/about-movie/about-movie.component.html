@@ -1,0 +1,53 @@
+<div class="row ml-2" *ngIf="movieDetails">
+  <div class="col-md-4">
+
+    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movieDetails.poster_path}}" alt="Card image">
+    <a *ngIf="movieDetails.homepage" href="{{movieDetails.homepage}}" class="btn btn-primary btn-block mt-4">Visit The Movie Website</a>
+  </div>
+
+  <div class="col-md-8 mt-4">
+    <h1>{{movieDetails.title}}<span class="ml-2">{{movieDetails.vote_average}}</span></h1>
+    <p>{{movieDetails.tagline}}</p>
+
+    <button *ngFor="let genre of movieDetails.genres" type="button" class="btn-sm btn-danger mb-4 mr-2">
+      <a [routerLink]="['/category',genre.id,genre.name]">{{genre.name}}</a></button>
+
+    <h1>Overview</h1>
+    <p>{{movieDetails.overview}}</p>
+
+    <div class="movies_caste">
+      <h1 class="text-center">Cast</h1>
+
+      <div *ngFor="let caste of movieCaste" class="card artistname" style="width: 150px;">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{caste.profile_path}}" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title illipsis" title="{{caste.name}}"><a [routerLink]="['/actor',caste.id]">{{caste.name}}</a></h4>
+          <h5>({{caste.character}})</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <h1 class="text-center">{{movieDetails.title}} | Official Trailer (HD) | Vertical Entertainment</h1>
+</div>
+
+
+
+
+<div class="row">
+  <h1 class="col-md-12">Similar Movies</h1>
+</div>
+<div class="row">
+  <div *ngFor="let similar of similarMovies" class="col-md-3">
+    <div class="card">
+      <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{similar.poster_path}}" alt="Card image"
+        style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title" title="{{similar.title}}"><a
+            [routerLink]="['/movieDetails',similar.id]">{{similar.title}}</a></h4>
+        <p>release Date: {{similar.release_date}}</p>
+        <p><a [routerLink]="['/movieDetails', similar.id]">View Details</a><span>{{similar.vote_average}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+
+
+ .container-fluid{
+  padding-left: 30px;
+}
+.col-md-2{
+  background-color: #072c4e;
+  color:#ebebeb;
+  height: 730px;
+  overflow: hidden;
+}
+.col-md-10{
+  float:left;
+}
+hr{
+  margin-top: 25px;
+  margin-bottom: 20px;
+  border-color: grey;
+}

@@ -1,0 +1,14 @@
+<div class="pl-4">
+  <h1 class="heading">Popular movies</h1>
+  <hr class="line">
+  <div *ngFor="let pop of popularList" class="card">
+    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{pop.poster_path}}" alt="Card image"
+      style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title" title="{{pop.title}}"><a [routerLink]="['/movieDetails', pop.id]">{{pop.title}}</a></h4>
+      <p class="date">Release Date: {{pop.release_date}}</p>
+      <p class="detail"><a [routerLink]="['/movieDetails', pop.id]">View details</a><span>{{pop.vote_average}}</span></p>
+    </div>
+  </div>
+</div>
+<mat-progress-bar *ngIf="loader" class="loader" color="accent" mode="indeterminate"></mat-progress-bar>

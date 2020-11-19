@@ -1,0 +1,8 @@
+<div *ngFor="let movie of movie" class="card" >
+    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title" title="{{movie.title}}"><a [routerLink]="['/movieDetails', movie.id]">{{movie.title}}</a></h4>
+      <p class="Date">Release Date: {{movie.release_date}}</p>
+      <p class="detail"><a [routerLink]="['/movieDetails', movie.id]">View Detail</a><span>{{movie.vote_count}}</span></p>
+    </div>
+    </div>

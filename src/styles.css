@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body{
+    background-color: #00405a;
+    margin: 0px;
+    padding:0px;
+}
+.loader {
+    position: fixed !important;
+    top: 0px;
+    height: 2px !important;
+    z-index: 999;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.card{
+  float: left;
+  width: 245px;
+  margin-right: 20px;
+  margin-bottom: 18px;
+}
+.card-title{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 12em;
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+ }
+
+.card{
+  background-color: #4e5d6c;
+  border:5px solid #4e5d6c;
+  max-height: 500px;
+}
+.artistname{
+  background-color: #4e5d6c;
+  border:5px solid #4e5d6c;
+  max-height: 339px;
+  min-height: 339px;
+}
+
+h4 a{
+  color:deepskyblue !important;
+  font-size: 19px;
+}
+p{
+  color:white;
+}
+.detail a{
+  color:coral !important;
+}
+.heading{
+  color:white;
+}
+.line{
+  border: 2px solid blueviolet;
+}
+
+    
+    
+  

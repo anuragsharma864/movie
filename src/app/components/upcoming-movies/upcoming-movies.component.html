@@ -1,0 +1,14 @@
+<div class="pl-4">
+    <h1 class="heading">Upcoming movies</h1>
+    <hr class="line">
+    <div *ngFor="let upComing of upComingMovie" class="card">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{upComing.poster_path}}" alt="Card image"
+            style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title" title="{{upComing.title}}"><a [routerLink]="['/movieDetails', upComing.id]">{{upComing.title}}</a></h4>
+            <p class="date">Release Date: {{upComing.release_date}}</p>
+            <p class="detail"><a [routerLink]="['/movieDetails', upComing.id]">View details</a><span>{{upComing.vote_average}}</span></p>
+        </div>
+    </div>
+</div>
+<mat-progress-bar *ngIf="loader" class="loader" color="accent" mode="indeterminate"></mat-progress-bar>

@@ -1,0 +1,19 @@
+<div class="jumbotron">
+    <p>Search for a Movies using the form below</p>
+    <div class="input-group">
+        <input type="text" class="form-control" (input)="onSearch($event)" placeholder="Search for movies...">
+        <span class="input-group-btn"> 
+            <button class="btn btn-primary" type="button">Go!</button>
+        </span>
+    </div>
+
+    <div *ngFor="let now of searchList" class="card">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{now.poster_path}}" style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title"><a (click)="searchList = []" [routerLink]="['/movieDetails', now.id]">{{now.title}}</a></h4>
+            <p class="date">{{now.release_date}}</p>
+            <p class="detail"><a (click)="searchList = []" [routerLink]="['/movieDetails', now.id]">View details</a><span>{{now.vote_count}}</span></p>
+        </div>
+    </div>
+
+</div>

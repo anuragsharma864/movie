@@ -1,0 +1,14 @@
+<div class="pl-4">
+    <h1 class="heading">Now-Playing </h1>
+    <hr class="line">
+    <div *ngFor="let now of nowPlaying" class="card">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{now.poster_path}}" style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title"><a [routerLink]="['/movieDetails', now.id]">{{now.title}}</a></h4>
+            <p class="date">{{now.release_date}}</p>
+            <p class="detail"><a [routerLink]="['/movieDetails', now.id]">View details</a><span>{{now.vote_count}}</span></p>
+        </div>
+    </div>
+</div>
+
+<mat-progress-bar *ngIf="loader" class="loader" color="accent" mode="indeterminate"></mat-progress-bar>

@@ -1,0 +1,17 @@
+.categorise a {
+    text-decoration: none;
+  }
+.text:hover{
+    background: darkred !important;
+  }
+.text:hover a {
+    color: #fff !important;
+  }
+.categorise h4{
+    padding: 10px;
+    background-color: darkred;
+    margin-bottom: 0px;
+ }
+ p{
+   cursor: pointer;
+ }

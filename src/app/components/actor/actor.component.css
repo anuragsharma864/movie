@@ -1,0 +1,25 @@
+.card-body{
+    color:white;
+    padding: 0px 0px 0px 10px;
+}
+.hight{
+    min-height: 550px !important;
+}
+.col-md-9{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.col-md-3{
+    margin-right: 0;
+    padding-right: 0;
+}
+.hight{
+ margin-right: 0;
+ padding-right: 0;
+}
+.illipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 8em;
+}

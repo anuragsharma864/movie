@@ -1,0 +1,14 @@
+.jumbotron{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 4px solid brown;
+    margin-bottom: 20px;
+    background-color: #072c4e;
+    padding-left: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .jumbotron p{
+      font-size: 18px;
+      color:white
+  }

@@ -1,0 +1,7 @@
+<div class="categorise">
+    <h4>Movies Category</h4>
+    <a *ngFor="let cat of genres" [routerLink]="['category', cat.id, cat.name]" ><p class="pt-2 pl-4 pb-2 text m-0">
+        {{cat.name}} </p></a>
+</div>
+
+<mat-progress-bar *ngIf="loader" class="loader" color="accent" mode="indeterminate"></mat-progress-bar>

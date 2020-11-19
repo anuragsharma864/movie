@@ -1,0 +1,16 @@
+<div class="pl-4">
+  <h1 class="heading">Top Rated movies</h1>
+  <hr class="line">
+  <div *ngFor="let latest of latestMovie" class="card">
+    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{latest.poster_path}}" alt="Card image"
+      style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title" title="{{latest.title}}"><a [routerLink]="['/movieDetails', latest.id]">{{latest.title}}</a></h4>
+      <p class="date">release date: {{latest.release_date}}</p>
+      <p class="detail"><a [routerLink]="['/movieDetails', latest.id]">View detail</a><span>{{latest.vote_count}}</span></p>
+    </div>
+  </div>
+  </div>
+
+  <mat-progress-bar *ngIf="loader" class="loader" color="accent" mode="indeterminate"></mat-progress-bar>
+

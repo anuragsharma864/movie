@@ -1,0 +1,43 @@
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.nav-item{
+  list-style-type: none;
+  display: flex;
+}
+ul{
+     list-style-type: none;
+}
+ul li{
+    float:left;
+}
+ul li a {
+    text-decoration: none;
+    color:#ebebeb;
+    font-size: small;
+    padding: 10px;
+    display: block;
+}
+ul li a:hover{
+    background-color: darkred;
+}
+.Search{
+    width: 500px;
+    font-size:small;
+    padding: 10px;
+    display: block;
+    margin-left: 20px;
+}
+.btn-md{
+    padding: 13px;
+    color: darkred;
+}
+.btn-md:hover{
+    background-color: sienna;
+}

@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-3">
+        <div *ngIf="actor" class="card hight">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{actor.profile_path}}" alt="Card image"
+                style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">{{actor.name}}</h4>
+                <strong>Birthdate: </strong> <span>{{actor.birthday}}</span><br>
+                <strong>Place of Birth: </strong> <span>{{actor.place_of_birth}}</span><br>
+                <strong class="pr-4">Popularity</strong><span class="pl-4">{{actor.popularity}}</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-9">
+        <div class="pl-4">
+            <h1 class="heading">Movies</h1>
+            <hr class="line">
+            <div *ngFor="let movie of actorMovies" class="card " style="width: 175px;">
+                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="Card image"
+                    style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title illipsis"  title="{{movie.title}}"><a [routerLink]="['/movieDetails',movie.id]">{{movie.title}}</a></h4>
+                    <p class="date">Release date: {{movie.release_date}}</p>
+                    <p class="detail"><a [routerLink]="['/movieDetails',movie.id]" class=" pr-4">View Details</a><span>{{movie.vote_count}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
